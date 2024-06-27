@@ -67,13 +67,13 @@ CREATE TABLE IF NOT EXISTS `LittleLemonDB`.`Bookings` (
   CONSTRAINT `fk_Bookings_Employees`
     FOREIGN KEY (`EmployeeID`)
     REFERENCES `LittleLemonDB`.`Employees` (`EmployeeID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_Bookings_Customer`
     FOREIGN KEY (`CustomerID`)
     REFERENCES `LittleLemonDB`.`Customers` (`CustomerID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB
 AUTO_INCREMENT = 10
 DEFAULT CHARACTER SET = utf8mb4
